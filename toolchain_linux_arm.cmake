@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.5)
 
-set(CMAKE_SYSTEM_NAME Darwin)
+set(CMAKE_SYSTEM_NAME Linux)
 set(CMAKE_SYSTEM_PROCESSOR ARM64)
 
 if(MINGW OR CYGWIN OR WIN32)
@@ -10,7 +10,7 @@ elseif(UNIX OR APPLE)
 endif()
 
 
-set(TOOLCHAIN_TRIPLE arm-none-eabi)
+set(TOOLCHAIN_TRIPLE gcc-linaro)
 set(TOOLCHAIN_PREFIX ${TOOLCHAIN_TRIPLE}-)
 
 execute_process(
